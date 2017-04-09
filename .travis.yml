@@ -7,7 +7,7 @@ services:
 
 install:
   - docker build -t render_that .
-  - docker run -d --name render_that render_that
+  - docker run -d --name render_that
 
 before_script:
   - bundle install
