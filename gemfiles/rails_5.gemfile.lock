@@ -1,5 +1,5 @@
 PATH
-  remote: .
+  remote: ..
   specs:
     render_that (0.1.0)
       rails (>= 4.0.0)
@@ -124,6 +124,7 @@ PLATFORMS
 DEPENDENCIES
   appraisal
   pry-rails
+  rails (~> 5.0.0)
   render_that!
 
 BUNDLED WITH
