@@ -1,8 +1,8 @@
-# RenderThat
+# RenderThat [![Build Status](https://travis-ci.org/Habu-Kagumba/render_that.svg?branch=master)](https://travis-ci.org/Habu-Kagumba/render_that)
 A simple Rails plugin that add custom renders.
 Current custom render types:
 
-- [x] pdf
+- [ ] pdf
 - [ ] markdown
 
 ## Usage
