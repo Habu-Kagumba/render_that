@@ -1,0 +1,16 @@
+sudo: required
+
+language: ruby
+
+services:
+  - docker
+
+install:
+  - docker build -t render_that .
+  - docker run -d --name render_that render_that
+
+before_script:
+  - bundle install
+
+script:
+  - rake test
