@@ -2,20 +2,12 @@ sudo: required
 
 language: ruby
 
-gemfile:
-  - gemfiles/rails_4.gemfile
-  - gemfiles/rails_5.gemfile
-
 services:
   - docker
 
-install:
-  - docker build -t render_that .
-  - docker run -it render_that
-
-before_script:
-  - bundle install
-  - appraisal install
+before_install:
+  - docker pull habu/rails4:latest
+  - docker pull habu/rails5:latest
 
 script:
-  - appraisal rake test
+  - bin/run_tests
