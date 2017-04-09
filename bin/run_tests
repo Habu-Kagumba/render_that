@@ -1,9 +1,16 @@
 #! /usr/bin/env bash
 
-# Run rails4 test
-docker build -f Dockerfile.rails4 -t render_that4 .
-docker run -it render_that4
+POWDER_BLUE=$(tput setaf 153)
+NORMAL=$(tput sgr0)
 
-# Run rails5 test
+printf "\n\n${POWDER_BLUE}----------------------------------------${NORMAL}\n\n"
+printf "${POWDER_BLUE}Building and testing rails 4.2.8 and rails 5.0.2${NORMAL}"
+printf "\n\n${POWDER_BLUE}----------------------------------------${NORMAL}\n\n"
+
+# Build rails4 and rails5 images
+docker build -f Dockerfile.rails4 -t render_that4 .
 docker build -f Dockerfile.rails5 -t render_that5 .
+
+# Run tests
+docker run -it render_that4
 docker run -it render_that5
